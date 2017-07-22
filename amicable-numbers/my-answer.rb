@@ -32,7 +32,7 @@ end
 def amicable_numbers(int)
   array = []
   all_sum_proper_divisors(int).each do |k,v|
-    all_sum_proper_divisors(int).select {|key, value| array.push(key, k) if k != key && value == v }
+    all_sum_proper_divisors(int).select {|key, value| array.push(key, k) if k != key && key == v && k == value }
   end
   array.uniq
 end
@@ -42,3 +42,4 @@ def sum_amicable_numbers(int)
 end
 
 puts sum_amicable_numbers(upper_limit)
+#puts amicable_numbers(upper_limit)
