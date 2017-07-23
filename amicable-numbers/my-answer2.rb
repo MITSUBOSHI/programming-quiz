@@ -22,7 +22,7 @@ def sum_proper_divisors(int)
   proper_divisors(int).sum
 end
 
-def amicable_numbers(int, list)
+def check_amicable(int, list)
   if list.include?(int)
     return []
   else
@@ -40,7 +40,7 @@ end
 list = []
 
 (2..upper_limit).map {|n|
-  amicable_numbers = amicable_numbers(n, list)
+  amicable_numbers = check_amicable(n, list)
   amicable_numbers.each{|i| list.push(i)} unless amicable_numbers.empty?
 }
 
